@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+
+<meta charset="UTF-8">
+<title>Sistema de Registro de Granja</title>
+<link rel="stylesheet" href="styles.css">
+
+</head>
+
+<body>
+
+<h1>Sistema de Registro Productivo de Granja</h1>
+
+<div class="contenedor">
+
+<h2>Registrar Datos</h2>
+
+<label>Vacas:</label>
+<input type="number" id="vacas">
+
+<label>Litros de leche por día:</label>
+<input type="number" id="leche">
+
+<label>Gallinas:</label>
+<input type="number" id="gallinas">
+
+<label>Huevos por día:</label>
+<input type="number" id="huevos">
+
+<label>Cerdos:</label>
+<input type="number" id="cerdos">
+
+<label>Lechones por mes:</label>
+<input type="number" id="lechones">
+
+<label>Gastos diarios de la granja ($):</label>
+<input type="number" id="gastos">
+
+<br><br>
+
+<button onclick="guardarDatos()">Guardar</button>
+<button onclick="mostrarResumen()">Ver Resumen</button>
+
+</div>
+
+
+<div class="contenedor">
+
+<h2>Resumen</h2>
+
+<p id="resultado"></p>
+<p id="alertas"></p>
+
+</div>
+
+<script src="app.js"></script>
+
+</body>
+</html>
