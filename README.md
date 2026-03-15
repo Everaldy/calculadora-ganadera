@@ -30,7 +30,6 @@ Lo desarrollé utilizando **HTML, CSS y JavaScript**.
 CALCULADORA-GANADERA/
 │
 ├── img/                # Carpeta de imágenes (ej: vaca.jpg)
-├── app.js              # Lógica principal en JavaScript
 ├── index.html          # Página principal
 ├── styles.css          # Estilos de la aplicación
 └── README.md           # Documentación del proyecto
