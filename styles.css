@@ -15,11 +15,15 @@ body{
     align-items:center;
     padding:40px;
     color:#333;
+    background-image: url("img/vaca.jpg"); /* Imagen de fondo */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
 }
 
 /* Título */
 h1{
-    color:white;
+    color:rgb(15, 14, 14);
     margin-bottom:30px;
     letter-spacing:1px;
 }
@@ -41,7 +45,7 @@ h1{
 
 /* Subtítulos */
 h2{
-    color:#2E7D32;
+    color:#99e99d;
     margin-bottom:15px;
 }
 
@@ -98,9 +102,7 @@ button:hover{
 
 /* Responsive */
 @media(max-width:500px){
-
-.contenedor{
-    width:90%;
-}
-
+    .contenedor{
+        width:90%;
+    }
 }
