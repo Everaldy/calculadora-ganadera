@@ -1,4 +1,5 @@
-// FILTRO
+
+// FILTRAR ANIMALES
 function filtrarAnimal() {
   let animal = document.getElementById("animal").value;
 
@@ -16,7 +17,7 @@ function filtrarAnimal() {
 }
 
 
-// GUARDAR
+// GUARDAR DATOS
 function guardarDatos(){
 
 let granja = {
@@ -40,10 +41,11 @@ gastos: Number(document.getElementById("gastos").value) || 0
 localStorage.setItem("granja", JSON.stringify(granja));
 
 alert("Datos guardados correctamente");
+
 }
 
 
-// CALCULAR
+// CALCULAR Y MOSTRAR EN CUADRO
 function calcular(){
 
 let datos = {
@@ -81,30 +83,25 @@ let gastosMensuales = datos.gastos * 30;
 // GANANCIA NETA
 let gananciaNeta = totalGanancias - gastosMensuales;
 
-// COLOR DINÁMICO
-let claseGanancia = gananciaNeta >= 0 ? "ganancia" : "perdida";
-
-// RESULTADO
+// RESULTADO EN CUADRO
 let resultado = `
 <h3>Resultado de la Granja</h3>
 
 Vacas: ${datos.vacas} <br>
 Leche mensual: ${lecheMensual} <br>
-Ganancia: $${gananciaLeche} <br><br>
+Ganancia leche: $${gananciaLeche} <br><br>
 
 Gallinas: ${datos.gallinas} <br>
 Huevos mensual: ${huevosMensual} <br>
-Ganancia: $${gananciaHuevos} <br><br>
+Ganancia huevos: $${gananciaHuevos} <br><br>
 
 Cerdos: ${datos.cerdos} <br>
 Lechones: ${datos.lechones} <br>
-Ganancia: $${gananciaCerdos} <br><br>
+Ganancia cerdos: $${gananciaCerdos} <br><br>
 
-<hr>
-
-Total: <span class="ganancia">$${totalGanancias}</span> <br>
-Gastos: $${gastosMensuales} <br>
-Ganancia Neta: <span class="${claseGanancia}">$${gananciaNeta}</span>
+Total ganancias: $${totalGanancias} <br>
+Gastos mensuales: $${gastosMensuales} <br>
+Ganancia Neta: $${gananciaNeta}
 `;
 
 let box = document.getElementById("resultadoBox");

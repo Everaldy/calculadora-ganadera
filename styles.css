@@ -13,7 +13,7 @@ body{
     flex-direction:column;
     align-items:center;
     padding:40px;
-    color:#333;
+    color:#0ae40a;
 
     background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),
     url("img/vaca.jpg");
@@ -23,7 +23,7 @@ body{
 
 /* Título */
 h1{
-    color:#fff;
+    color:#000000;
     margin-bottom:30px;
     text-align:center;
     text-shadow:2px 2px 5px rgba(0,0,0,0.6);
@@ -70,7 +70,7 @@ button{
     border:none;
     border-radius:10px;
     background:linear-gradient(45deg,#030303,#0a0a0a);
-    color:white;
+    color:rgb(99, 85, 85);
     cursor:pointer;
 }
 
@@ -132,4 +132,45 @@ button:hover{
 }
 button[onclick="mostrarResumen()"]{
     display:none;
+}
+/* 📱 MEJORA PARA CELULARES */
+@media(max-width:600px){
+
+    body{
+        padding:15px;
+    }
+
+    h1{
+        font-size:20px;
+    }
+
+    .contenedor{
+        width:100%;
+        padding:18px;
+        margin:10px 0;
+    }
+
+    h2{
+        font-size:18px;
+    }
+
+    label{
+        font-size:13px;
+    }
+
+    input, select{
+        font-size:14px;
+        padding:8px;
+    }
+
+    button{
+        width:100%;
+        margin-top:10px;
+    }
+
+    #resultadoBox{
+        width:100%;
+        padding:15px;
+        font-size:14px;
+    }
 }
