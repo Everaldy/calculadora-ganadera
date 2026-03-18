@@ -16,23 +16,53 @@
 
 <h2>Registrar Datos</h2>
 
-<label>Vacas:</label>
-<input type="number" id="vacas">
+<label>Selecciona el animal:</label>
+<select id="animal" onchange="filtrarAnimal()">
+  <option value="">-- Selecciona --</option>
+  <option value="vaca">Vaca</option>
+  <option value="gallina">Gallina</option>
+  <option value="cerdo">Cerdo</option>
+</select>
 
-<label>Litros de leche por día:</label>
-<input type="number" id="leche">
+<br><br>
 
-<label>Gallinas:</label>
-<input type="number" id="gallinas">
+<!-- VACAS -->
+<div id="vaca" style="display:none;">
+  <label>Vacas:</label>
+  <input type="number" id="vacas">
 
-<label>Huevos por día:</label>
-<input type="number" id="huevos">
+  <label>Litros de leche por día:</label>
+  <input type="number" id="leche">
 
-<label>Cerdos:</label>
-<input type="number" id="cerdos">
+  <label>Precio por litro de leche ($):</label>
+  <input type="number" id="precioLeche">
+</div>
 
-<label>Lechones por mes:</label>
-<input type="number" id="lechones">
+<!-- GALLINAS -->
+<div id="gallina" style="display:none;">
+  <label>Gallinas:</label>
+  <input type="number" id="gallinas">
+
+  <label>Huevos por día:</label>
+  <input type="number" id="huevos">
+
+  <label>Precio por huevo ($):</label>
+  <input type="number" id="precioHuevo">
+</div>
+
+<!-- CERDOS -->
+<div id="cerdo" style="display:none;">
+  <label>Cerdos:</label>
+  <input type="number" id="cerdos">
+
+  <label>Lechones por mes:</label>
+  <input type="number" id="lechones">
+
+  <label>Precio por lechón ($):</label>
+  <input type="number" id="precioLechon">
+</div>
+
+<br>
 
 <label>Gastos diarios de la granja ($):</label>
 <input type="number" id="gastos">
@@ -40,10 +70,10 @@
 <br><br>
 
 <button onclick="guardarDatos()">Guardar</button>
-<button onclick="mostrarResumen()">Ver Resumen</button>
+<button onclick="calcular()">Calcular</button>
+<div id="resultadoBox" style="display:none;"></div>
 
 </div>
-
 
 <div class="contenedor">
 
