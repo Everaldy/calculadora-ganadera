@@ -19,6 +19,7 @@ body{
     url("img/vaca.jpg");
     background-size: cover;
     background-position: center;
+    background-repeat: no-repeat;
 }
 
 /* Título */
@@ -31,13 +32,13 @@ h1{
 
 /* Tarjetas */
 .contenedor{
-    background: rgba(255,255,255,0.15); /* transparencia */
+    background: rgba(255,255,255,0.15);
     width:400px;
     padding:25px;
     border-radius:20px;
     margin:15px;
     box-shadow:0 15px 30px rgba(0,0,0,0.4);
-    backdrop-filter: blur(10px); /* efecto vidrio */
+    backdrop-filter: blur(10px);
     border:1px solid rgba(255,255,255,0.3);
 }
 
@@ -70,7 +71,7 @@ button{
     border:none;
     border-radius:10px;
     background:linear-gradient(45deg,#030303,#0a0a0a);
-    color:rgb(99, 85, 85);
+    color:#fff;
     cursor:pointer;
 }
 
@@ -78,13 +79,13 @@ button:hover{
     transform:scale(1.05);
 }
 
-/* CUADRO RESULTADO PRO */
+/* RESULTADO */
 #resultadoBox{
     margin-top:20px;
     padding:25px;
     border-radius:20px;
-    background: rgba(255,255,255,0.2); /* transparente */
-    backdrop-filter: blur(10px); /* efecto vidrio */
+    background: rgba(255,255,255,0.2);
+    backdrop-filter: blur(10px);
     border:1px solid rgba(255,255,255,0.3);
     box-shadow: 0 15px 35px rgba(0,0,0,0.4);
     line-height:1.8;
@@ -93,20 +94,17 @@ button:hover{
     width:100%;
 }
 
-/* Título del resultado */
 #resultadoBox h3{
     text-align:center;
     margin-bottom:15px;
     color:#2E7D32;
 }
 
-/* Ganancias */
 .ganancia{
     color:#2E7D32;
     font-weight:bold;
 }
 
-/* Pérdidas */
 .perdida{
     color:#D32F2F;
     font-weight:bold;
@@ -125,19 +123,14 @@ button:hover{
 }
 
 /* Responsive */
-@media(max-width:500px){
-    .contenedor{
-        width:100%;
-    }
-}
-button[onclick="mostrarResumen()"]{
-    display:none;
-}
-/* 📱 MEJORA PARA CELULARES */
 @media(max-width:600px){
 
     body{
         padding:15px;
+
+        /* 🔥 CLAVE: imagen completa en celular */
+        background-size: contain;
+        background-color: black;
     }
 
     h1{
@@ -173,4 +166,9 @@ button[onclick="mostrarResumen()"]{
         padding:15px;
         font-size:14px;
     }
+}
+
+/* Ocultar botón viejo */
+button[onclick="mostrarResumen()"]{
+    display:none;
 }
