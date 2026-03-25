@@ -99,23 +99,35 @@ git clone https://github.com/Everaldy/CALCULADORA-GANADERA.git
 * **Accesibilidad:** El enlace de WhatsApp ahora abre en una pestaña nueva (`target="_blank"`) para que no se pierdan los datos que el usuario ya ingresó en el formulario.
 
 ---
-###  Módulo de Seguridad y Acceso (Nuevo)
-**Desarrollamos** un sistema de control de acceso para proteger la integridad de los datos de la granja:
-* **Login Integrado:** No usamos archivos externos; **diseñamos** una capa (Overlay) con efecto de vidrio que aparece automáticamente al cargar el sitio.
-* **Control de Roles:** * **Configuramos** un perfil de **Administrador** con acceso total.
-    * **Restringimos** el perfil de **Vendedor**, haciendo que el botón de "Calcular" sea invisible para evitar modificaciones no autorizadas.
-* **Memoria de Usuario:** Gracias al uso de `localStorage`, el sistema recuerda quién entró. **Tip del equipo:** Si refrescas la página, no perderás tu sesión.
+#  Sistema de Registro Productivo de Granja
 
-###  Salida Segura (Botón Flotante de Cierre)
-**Inspirados** en el botón de WhatsApp que ya teníamos, **creamos** un segundo botón flotante en la esquina opuesta:
-* **Ubicación Estratégica:** Lo colocamos con `position: fixed` para que el usuario siempre pueda cerrar sesión sin importar en qué parte del formulario se encuentre.
-* **Acción Limpia:** Al presionarlo, el equipo **programó** una función que limpia la memoria del navegador y devuelve al usuario instantáneamente a la pantalla de inicio.
+**Problema rural abordado:** La falta de digitalización en pequeñas fincas genera desorden en el inventario y errores manuales en el cálculo de costos. Este sistema centraliza los datos para optimizar la rentabilidad del productor.
 
-###  Mejoras en la Lógica de Programación
-* **JS Centralizado:** **Decidimos** mantener todo el funcionamiento en nuestro archivo `script.js` para que el código sea más fácil de leer y mantener.
-* **Estilo Coherente:** **Ajustamos** el CSS para que los nuevos botones mantengan la misma estética de bordes redondeados y sombras que definimos al inicio del proyecto.
+###  Mejoras Implementadas (Semana Actual)
+* **Seguridad por Roles:** Diseñamos un *Login Overlay* con efecto **Glassmorphism** integrado en el index.
+* **Control de Acceso:** Diferenciamos perfiles; el **Administrador** tiene acceso total, mientras que al **Vendedor** se le restringe el botón de cálculo mediante lógica de DOM.
+* **Persistencia:** Implementamos `localStorage` para mantener la sesión activa tras recargar.
+* **Interfaz Flotante:** Añadimos un botón de **Cerrar Sesión** con posición fija (`fixed`) para navegación rápida.
+
+### Comandos de Terminal Utilizados
+* `git add .` (Preparar cambios).
+* `git commit -m "Mejora: Sistema de roles y login"` (Registrar versión).
+* `git push origin main` (Subir al repositorio remoto).
+
+### Atajos de Teclado Aplicados
+* **F12:** Abrir herramientas de desarrollador para depurar el `localStorage`.
+* **Alt + Z:** Ajuste de palabra en VS Code para mejor lectura del código.
+* **Ctrl + S:** Guardado rápido de cambios en archivos de estilo y lógica.
+
+###  Instrucciones de Ejecución
+1. Abrir la carpeta raíz del proyecto en **VS Code**.
+2. Clic derecho sobre `index.html` y seleccionar **"Open with Live Server"**.
+3. Ingresar el nombre de usuario y elegir el **Rol** en la pantalla inicial para entrar al sistema.
+
+###  Reflexión Técnica
+Aprendimos que la seguridad es fundamental en entornos rurales donde varios operarios comparten un mismo equipo. Implementar **lógica condicional en JavaScript** para ocultar elementos según el rol es una solución eficaz para proteger la integridad de los reportes financieros.
+
 ---
-
 ## Autores
 
 * **Everaldy Ayala**
