@@ -78,6 +78,27 @@ git clone https://github.com/Everaldy/CALCULADORA-GANADERA.git
 * Se agregó **formulario dinámico**, mostrando solo el animal seleccionado.
 * Se optimizó el diseño para que sea **responsive en celulares **.
 
+
+
+##  Notas de la última actualización (Marzo 2026)
+
+ En esta versión **hemos trabajado** en darle un toque más profesional y funcional al sistema. Estas son las mejoras que implementamos:
+
+###  Botón de Soporte Directo (WhatsApp)
+**Agregamos** un acceso directo flotante para que cualquier duda se pueda resolver al instante. 
+* Lo configuramos con `position: fixed` para que, sin importar cuánto bajes en el registro de animales, el botón siempre esté a la mano en la esquina inferior.
+* **Tip del equipo:** Si necesitas cambiar el número de contacto, solo busca la etiqueta `<a>` al final del HTML y edita el enlace de `wa.me`.
+
+### Pulido de la Interfaz (UI/UX)
+**Refinamos** el estilo visual para que no solo sea funcional, sino que se vea increíble:
+* **Efecto de Vidrio (Glassmorphism):** Ajustamos las transparencias en los cuadros de "Registrar Datos" y "Resumen" para que la foto de fondo de la granja luzca genial sin quitarle legibilidad al texto.
+* **Interactividad:** Le dimos "vida" a los botones. Ahora, al pasar el mouse por el botón de WhatsApp o los botones de "Guardar", estos reaccionan con un suave efecto de escalado (`scale`).
+
+###  Ajustes Técnicos
+* **Orden del código:** Movimos los estilos del botón al final del CSS para mantener todo organizado.
+* **Accesibilidad:** El enlace de WhatsApp ahora abre en una pestaña nueva (`target="_blank"`) para que no se pierdan los datos que el usuario ya ingresó en el formulario.
+
+---
 ---
 
 ## Autores
@@ -86,4 +107,4 @@ git clone https://github.com/Everaldy/CALCULADORA-GANADERA.git
 * **Alejandra Valencia**
 * **Alejandro Velazques**
 
-
+---
