@@ -12,9 +12,27 @@
    target="_blank">
     <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp">
 </a>
+
+<button onclick="cerrarSesion()" class="btn-salir-flotante">
+     Salir
+</button>
 </head>
 
 <body>
+  <div id="loginOverlay" style="position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.8); z-index: 9999; display: flex; justify-content: center; align-items: center; backdrop-filter: blur(10px);">
+    <div class="glass-card" style="width: 320px; padding: 30px; text-align: center; color: white; border: 1px solid rgba(255,255,255,0.2); border-radius: 20px; background: rgba(255,255,255,0.1);">
+        <h2>Iniciar Sesión</h2>
+        <br>
+        <input type="text" id="userIn" placeholder="Usuario" style="width: 90%; padding: 10px; margin-bottom: 15px; border-radius: 8px; border: none;">
+        <select id="roleIn" style="width: 97%; padding: 10px; margin-bottom: 15px; border-radius: 8px; border: none;">
+            <option value="admin">Administrador (Dueño)</option>
+            <option value="vendedor">Vendedor / Operario</option>
+        </select>
+        <button onclick="entrarSistema()" class="btn-primary" style="width: 100%; padding: 12px; background: #25d366; color: white; border: none; border-radius: 25px; cursor: pointer; font-weight: bold;">
+            ENTRAR
+        </button>
+    </div>
+</div>
 
 <h1>Sistema de Registro Productivo de Granja</h1>
 

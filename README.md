@@ -99,6 +99,21 @@ git clone https://github.com/Everaldy/CALCULADORA-GANADERA.git
 * **Accesibilidad:** El enlace de WhatsApp ahora abre en una pestaña nueva (`target="_blank"`) para que no se pierdan los datos que el usuario ya ingresó en el formulario.
 
 ---
+###  Módulo de Seguridad y Acceso (Nuevo)
+**Desarrollamos** un sistema de control de acceso para proteger la integridad de los datos de la granja:
+* **Login Integrado:** No usamos archivos externos; **diseñamos** una capa (Overlay) con efecto de vidrio que aparece automáticamente al cargar el sitio.
+* **Control de Roles:** * **Configuramos** un perfil de **Administrador** con acceso total.
+    * **Restringimos** el perfil de **Vendedor**, haciendo que el botón de "Calcular" sea invisible para evitar modificaciones no autorizadas.
+* **Memoria de Usuario:** Gracias al uso de `localStorage`, el sistema recuerda quién entró. **Tip del equipo:** Si refrescas la página, no perderás tu sesión.
+
+###  Salida Segura (Botón Flotante de Cierre)
+**Inspirados** en el botón de WhatsApp que ya teníamos, **creamos** un segundo botón flotante en la esquina opuesta:
+* **Ubicación Estratégica:** Lo colocamos con `position: fixed` para que el usuario siempre pueda cerrar sesión sin importar en qué parte del formulario se encuentre.
+* **Acción Limpia:** Al presionarlo, el equipo **programó** una función que limpia la memoria del navegador y devuelve al usuario instantáneamente a la pantalla de inicio.
+
+###  Mejoras en la Lógica de Programación
+* **JS Centralizado:** **Decidimos** mantener todo el funcionamiento en nuestro archivo `script.js` para que el código sea más fácil de leer y mantener.
+* **Estilo Coherente:** **Ajustamos** el CSS para que los nuevos botones mantengan la misma estética de bordes redondeados y sombras que definimos al inicio del proyecto.
 ---
 
 ## Autores

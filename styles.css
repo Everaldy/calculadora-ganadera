@@ -196,3 +196,30 @@ button[onclick="mostrarResumen()"]{
 .whatsapp-btn:hover {
     transform: scale(1.1); /* Se hace un poquito más grande al pasar el mouse */
 }
+/* Estilo del botón flotante tipo WhatsApp */
+.btn-salir-flotante {
+    position: fixed;
+    bottom: 20px;       /* Distancia desde abajo */
+    left: 20px;         /* Lo ponemos a la IZQUIERDA para no tapar el de WhatsApp */
+    width: 60px;        /* Tamaño circular */
+    height: 60px;
+    background-color: #ff4d4d; /* Rojo llamativo */
+    color: white;
+    border: none;
+    border-radius: 50%; /* Lo hace un círculo perfecto */
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.4);
+    z-index: 9999;      /* Siempre por encima de todo */
+    transition: all 0.3s ease;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.btn-salir-flotante:hover {
+    background-color: #cc0000;
+    transform: scale(1.1) rotate(10deg); /* Se agranda y gira un poquito */
+}
