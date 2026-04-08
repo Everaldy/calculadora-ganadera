@@ -223,3 +223,16 @@ button[onclick="mostrarResumen()"]{
     background-color: #cc0000;
     transform: scale(1.1) rotate(10deg); /* Se agranda y gira un poquito */
 }
+#btnGlosario {
+  background-color: #2e7d32;
+  color: white;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+#btnGlosario:hover {
+  background-color: #1b5e20;
+}

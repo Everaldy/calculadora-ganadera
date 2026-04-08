@@ -127,6 +127,29 @@ git clone https://github.com/Everaldy/CALCULADORA-GANADERA.git
 ###  Reflexión Técnica
 Aprendimos que la seguridad es fundamental en entornos rurales donde varios operarios comparten un mismo equipo. Implementar **lógica condicional en JavaScript** para ocultar elementos según el rol es una solución eficaz para proteger la integridad de los reportes financieros.
 
+### Nueva Funcionalidad: Glosario Ganadero
+
+En esta actualización trabajamos en agregar una nueva sección al sistema llamada **Glosario Ganadero**, con la idea de complementar la calculadora y hacerla más completa a nivel informativo.
+
+#### 🔹 Lo que implementamos:
+* Creamos una nueva página (`glosario.html`) para manejar el glosario de forma independiente.
+* Agregamos un botón en la interfaz principal que permite acceder fácilmente a esta sección.
+* Incluimos más de **50 términos ganaderos** con definiciones claras y entendibles.
+* Organizamos la información en tarjetas (cards), lo que hace que visualmente se vea más ordenado y moderno.
+* Usamos un diseño en grid para distribuir mejor el contenido.
+
+####  Mejoras en el diseño:
+* Añadimos una imagen de fondo relacionada con el entorno ganadero para que se vea más acorde al proyecto.
+* Aplicamos un overlay oscuro para mejorar la lectura del contenido.
+* Ajustamos el scroll y el comportamiento del fondo para evitar errores visuales al bajar.
+* En general, buscamos que esta sección se vea más como una aplicación real y no solo como texto.
+
+####  Integración con el sistema:
+* Conectamos el glosario con la página principal usando navegación con JavaScript.
+* También agregamos un botón para volver, facilitando la navegación entre secciones.
+
+ **Resultado:**  
+Con esta mejora logramos que la aplicación no solo sirva para hacer cálculos, sino también como una herramienta de apoyo para entender mejor los conceptos ganaderos, lo que le da más valor al proyecto en la feria.
 ---
 ## Autores
 

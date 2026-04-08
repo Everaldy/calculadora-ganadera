@@ -169,3 +169,6 @@ function cerrarSesion() {
     alert("Has salido del sistema ganadero");
     location.reload();    // Recarga para que aparezca el Login
 }
+function irAGlosario() {
+  window.location.href = "glosario.html";
+}

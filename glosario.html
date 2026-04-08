@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Glosario Ganadero</title>
+
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: url("https://images.unsplash.com/photo-1500595046743-cd271d694d30") no-repeat center center/cover;
+      height: 100vh;
+      position: relative;
+    }
+
+    /* Oscurecer fondo */
+    body::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0,0,0,0.5);
+      z-index: 0;
+    }
+
+    .contenedor {
+      position: relative;
+      z-index: 1;
+      max-width: 800px;
+      margin: 50px auto;
+      background: rgba(255, 255, 255, 0.15);
+      padding: 20px;
+      border-radius: 15px;
+      backdrop-filter: blur(10px);
+      color: white;
+    }
+
+    h1 {
+      text-align: center;
+    }
+
+    ul {
+      padding: 0;
+      list-style: none;
+    }
+
+    li {
+      margin: 8px 0;
+      padding: 5px;
+      border-bottom: 1px solid rgba(255,255,255,0.3);
+    }
+
+    button {
+      display: block;
+      margin: 20px auto 0;
+      padding: 10px 20px;
+      background: #2e7d32;
+      color: white;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+      font-size: 16px;
+    }
+
+    button:hover {
+      background: #1b5e20;
+    }
+  </style>
+</head>
+
+<body>
+
+<div class="contenedor">
+  <h1>Glosario Ganadero</h1>
+
+  <ul>
+    <li><b>Bovino:</b> Ganado vacuno.</li>
+    <li><b>Porcino:</b> Relativo a los cerdos.</li>
+    <li><b>Avícola:</b> Relativo a aves.</li>
+    <li><b>Ganadería:</b> Cría de animales.</li>
+    <li><b>Establo:</b> Lugar donde viven los animales.</li>
+    <li><b>Pastoreo:</b> Alimentación en el campo.</li>
+    <li><b>Forraje:</b> Alimento vegetal.</li>
+    <li><b>Ordeño:</b> Extracción de leche.</li>
+    <li><b>Vacuno:</b> Relativo a vacas.</li>
+    <li><b>Lechero:</b> Producción de leche.</li>
+    <li><b>Cárnico:</b> Producción de carne.</li>
+    <li><b>Rebaño:</b> Grupo de animales.</li>
+    <li><b>Corral:</b> Espacio cerrado.</li>
+    <li><b>Alimento balanceado:</b> Comida nutritiva.</li>
+    <li><b>Destete:</b> Separación de la cría.</li>
+    <li><b>Genética:</b> Herencia de características.</li>
+    <li><b>Raza:</b> Tipo de animal.</li>
+    <li><b>Sanidad:</b> Estado de salud.</li>
+    <li><b>Vacunación:</b> Prevención de enfermedades.</li>
+    <li><b>Parásito:</b> Organismo dañino.</li>
+    <li><b>Producción:</b> Rendimiento animal.</li>
+    <li><b>Nutrición:</b> Alimentación adecuada.</li>
+    <li><b>Engorde:</b> Aumento de peso.</li>
+    <li><b>Granja:</b> Lugar de crianza.</li>
+    <li><b>Campo:</b> Zona rural.</li>
+    <li><b>Finca:</b> Terreno agrícola.</li>
+    <li><b>Agropecuario:</b> Agricultura y ganadería.</li>
+    <li><b>Leche:</b> Producto animal.</li>
+    <li><b>Carne:</b> Producto alimenticio.</li>
+    <li><b>Cría:</b> Animal joven.</li>
+    <li><b>Reproducción:</b> Generar nuevas crías.</li>
+    <li><b>Inseminación:</b> Reproducción asistida.</li>
+    <li><b>Parto:</b> Nacimiento.</li>
+    <li><b>Ternero:</b> Cría de vaca.</li>
+    <li><b>Lechón:</b> Cría de cerdo.</li>
+    <li><b>Gallinero:</b> Lugar de gallinas.</li>
+    <li><b>Bioseguridad:</b> Protección sanitaria.</li>
+    <li><b>Control:</b> Supervisión.</li>
+    <li><b>Registro:</b> Datos guardados.</li>
+    <li><b>Producción diaria:</b> Rendimiento diario.</li>
+    <li><b>Costo:</b> Gasto.</li>
+    <li><b>Ganancia:</b> Beneficio.</li>
+    <li><b>Insumo:</b> Recurso utilizado.</li>
+    <li><b>Agua:</b> Recurso vital.</li>
+    <li><b>Pastizal:</b> Zona de pasto.</li>
+    <li><b>Clima:</b> Condiciones ambientales.</li>
+    <li><b>Sombra:</b> Protección solar.</li>
+    <li><b>Productividad:</b> Nivel de producción.</li>
+    <li><b>Bienestar animal:</b> Buen trato al animal.</li>
+    <li><b>Manejo:</b> Cuidado del ganado.</li>
+  </ul>
+
+  <button onclick="volver()">Volver</button>
+</div>
+
+<script>
+function volver() {
+  window.location.href = "index.html";
+}
+</script>
+
+</body>
+</html>

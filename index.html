@@ -1,114 +1,316 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
+  <meta charset="UTF-8">
+  <title>Glosario Ganadero</title>
 
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Sistema de Registro de Granja</title>
-<link rel="stylesheet" href="styles.css">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: url("https://images.unsplash.com/photo-1500595046743-cd271d694d30") no-repeat center center/cover;
+      min-height: 100vh;
+      position: relative;
+    }
 
-<a href="https://wa.me/573112361741?text=Hola,%20necesito%20ayuda%20con%20el%20sistema%20de%20granja" 
-   class="whatsapp-btn" 
-   target="_blank">
-    <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp">
-</a>
+    body::before {
+      content: "";
+      position: fixed;
+      width: 100%;
+      height: 100%;
+      background: rgba(0,0,0,0.6);
+      top: 0;
+      left: 0;
+    }
 
-<button onclick="cerrarSesion()" class="btn-salir-flotante">
-     Salir
-</button>
+    .contenedor {
+      position: relative;
+      z-index: 1;
+      max-width: 900px;
+      margin: 60px auto;
+      padding: 20px;
+      color: white;
+    }
+
+    h1 {
+      text-align: center;
+      margin-bottom: 30px;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 15px;
+    }
+
+    .card {
+      background: rgba(255,255,255,0.12);
+      padding: 15px;
+      border-radius: 12px;
+      backdrop-filter: blur(8px);
+      transition: transform 0.2s;
+    }
+
+    .card:hover {
+      transform: scale(1.03);
+    }
+
+    .card h3 {
+      margin: 0 0 5px;
+      color: #a5d6a7;
+    }
+
+    .card p {
+      margin: 0;
+      font-size: 14px;
+      line-height: 1.4;
+    }
+
+    button {
+      display: block;
+      margin: 30px auto 0;
+      padding: 12px 20px;
+      background: #2e7d32;
+      border: none;
+      border-radius: 10px;
+      color: white;
+      font-size: 16px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background: #1b5e20;
+    }
+
+    @media (max-width: 700px) {
+      .grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
 </head>
 
 <body>
-  <div id="loginOverlay" style="position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.8); z-index: 9999; display: flex; justify-content: center; align-items: center; backdrop-filter: blur(10px);">
-    <div class="glass-card" style="width: 320px; padding: 30px; text-align: center; color: white; border: 1px solid rgba(255,255,255,0.2); border-radius: 20px; background: rgba(255,255,255,0.1);">
-        <h2>Iniciar Sesión</h2>
-        <br>
-        <input type="text" id="userIn" placeholder="Usuario" style="width: 90%; padding: 10px; margin-bottom: 15px; border-radius: 8px; border: none;">
-        <select id="roleIn" style="width: 97%; padding: 10px; margin-bottom: 15px; border-radius: 8px; border: none;">
-            <option value="admin">Administrador (Dueño)</option>
-            <option value="vendedor">Vendedor / Operario</option>
-        </select>
-        <button onclick="entrarSistema()" class="btn-primary" style="width: 100%; padding: 12px; background: #25d366; color: white; border: none; border-radius: 25px; cursor: pointer; font-weight: bold;">
-            ENTRAR
-        </button>
+
+<div class="contenedor">
+  <h1> Glosario Ganadero </h1>
+
+  <div class="grid">
+
+    <div class="card">
+      <h3>Bovino</h3>
+      <p>Animal de la especie vacuna utilizado principalmente para la producción de carne y leche, siendo fundamental en la ganadería.</p>
     </div>
+
+    <div class="card">
+      <h3>Ganadería</h3>
+      <p>Actividad económica dedicada a la cría, manejo y explotación de animales para obtener productos como carne, leche y derivados.</p>
+    </div>
+
+    <div class="card">
+      <h3>Pastoreo</h3>
+      <p>Sistema de alimentación donde los animales consumen pasto directamente en el campo, optimizando costos de producción.</p>
+    </div>
+
+    <div class="card">
+      <h3>Forraje</h3>
+      <p>Conjunto de plantas utilizadas como alimento para el ganado, esenciales para su nutrición y desarrollo.</p>
+    </div>
+
+    <div class="card">
+      <h3>Ordeño</h3>
+      <p>Proceso de extracción de leche de animales como vacas o cabras, de forma manual o mecánica.</p>
+    </div>
+
+    <div class="card">
+      <h3>Reproducción</h3>
+      <p>Proceso mediante el cual los animales generan descendencia, puede ser natural o asistido mediante inseminación.</p>
+    </div>
+
+    <div class="card">
+      <h3>Inseminación Artificial</h3>
+      <p>Técnica de reproducción asistida que permite mejorar la genética del ganado sin necesidad de monta natural.</p>
+    </div>
+
+    <div class="card">
+      <h3>Sanidad Animal</h3>
+      <p>Conjunto de prácticas destinadas a prevenir enfermedades y mantener el bienestar del ganado.</p>
+    </div>
+
+    <div class="card">
+      <h3>Bioseguridad</h3>
+      <p>Medidas implementadas para evitar la entrada y propagación de enfermedades en una explotación ganadera.</p>
+    </div>
+
+    <div class="card">
+      <h3>Engorde</h3>
+      <p>Fase de producción en la que se busca aumentar el peso del animal para su comercialización.</p>
+    </div>
+
+    <div class="card">
+      <h3>Destete</h3>
+      <p>Separación de la cría de su madre, iniciando una alimentación independiente.</p>
+    </div>
+
+    <div class="card">
+      <h3>Productividad</h3>
+      <p>Capacidad de un sistema ganadero para generar productos de manera eficiente y rentable.</p>
+    </div>
+
+    <div class="card">
+      <h3>Bienestar Animal</h3>
+      <p>Condiciones adecuadas de vida que garantizan la salud, comodidad y comportamiento natural del animal.</p>
+    </div>
+
+    <div class="card">
+      <h3>Raza</h3>
+      <p>Grupo de animales con características genéticas similares que determinan su producción y adaptación.</p>
+    </div>
+
+    <div class="card">
+      <h3>Lechero</h3>
+      <p>Sistema de producción enfocado en la obtención de leche y sus derivados.</p>
+    </div>
+
+    <div class="card">
+      <h3>Cárnico</h3>
+      <p>Sistema ganadero orientado a la producción de carne para consumo humano.</p>
+    </div>
+    <div class="card">
+  <h3>Producción Lechera</h3>
+  <p>Proceso enfocado en la obtención, manejo y comercialización de leche, asegurando calidad e higiene.</p>
 </div>
 
-<h1>Sistema de Registro Productivo de Granja</h1>
-
-<div class="contenedor">
-
-<h2>Registrar Datos</h2>
-
-<label>Selecciona el animal:</label>
-<select id="animal" onchange="filtrarAnimal()">
-  <option value="">-- Selecciona --</option>
-  <option value="vaca">Vaca</option>
-  <option value="gallina">Gallina</option>
-  <option value="cerdo">Cerdo</option>
-</select>
-
-<br><br>
-
-<!-- VACAS -->
-<div id="vaca" style="display:none;">
-  <label>Vacas:</label>
-  <input type="number" id="vacas">
-
-  <label>Litros de leche por día:</label>
-  <input type="number" id="leche">
-
-  <label>Precio por litro de leche ($):</label>
-  <input type="number" id="precioLeche">
+<div class="card">
+  <h3>Producción Cárnica</h3>
+  <p>Sistema productivo orientado a la cría y engorde de animales destinados al consumo de carne.</p>
 </div>
 
-<!-- GALLINAS -->
-<div id="gallina" style="display:none;">
-  <label>Gallinas:</label>
-  <input type="number" id="gallinas">
-
-  <label>Huevos por día:</label>
-  <input type="number" id="huevos">
-
-  <label>Precio por huevo ($):</label>
-  <input type="number" id="precioHuevo">
+<div class="card">
+  <h3>Pastizal</h3>
+  <p>Área cubierta de pasto natural o sembrado utilizada para la alimentación del ganado.</p>
 </div>
 
-<!-- CERDOS -->
-<div id="cerdo" style="display:none;">
-  <label>Cerdos:</label>
-  <input type="number" id="cerdos">
-
-  <label>Lechones por mes:</label>
-  <input type="number" id="lechones">
-
-  <label>Precio por lechón ($):</label>
-  <input type="number" id="precioLechon">
+<div class="card">
+  <h3>Suplementación</h3>
+  <p>Aporte adicional de nutrientes al ganado cuando el forraje no cubre sus necesidades.</p>
 </div>
 
-<br>
-
-<label>Gastos diarios de la granja ($):</label>
-<input type="number" id="gastos">
-
-<br><br>
-
-<button onclick="guardarDatos()">Guardar</button>
-<button onclick="calcular()">Calcular</button>
-<div id="resultadoBox" style="display:none;"></div>
-
+<div class="card">
+  <h3>Nutrición Animal</h3>
+  <p>Estudio y aplicación de dietas equilibradas para garantizar el crecimiento y productividad del ganado.</p>
 </div>
 
-<div class="contenedor">
-
-<h2>Resumen</h2>
-
-<p id="resultado"></p>
-<p id="alertas"></p>
-
+<div class="card">
+  <h3>Vacunación</h3>
+  <p>Aplicación de biológicos para prevenir enfermedades infecciosas en los animales.</p>
 </div>
 
-<script src="script.js"></script>
+<div class="card">
+  <h3>Enfermedad Zoonótica</h3>
+  <p>Enfermedad que puede transmitirse de animales a humanos, como la brucelosis.</p>
+</div>
+
+<div class="card">
+  <h3>Porcicultura</h3>
+  <p>Actividad dedicada a la cría, manejo y producción de cerdos.</p>
+</div>
+
+<div class="card">
+  <h3>Avicultura</h3>
+  <p>Producción y manejo de aves de corral como gallinas, pollos y pavos.</p>
+</div>
+
+<div class="card">
+  <h3>Manejo Sanitario</h3>
+  <p>Conjunto de prácticas para prevenir, controlar y tratar enfermedades en el ganado.</p>
+</div>
+
+<div class="card">
+  <h3>Índice de Conversión Alimenticia</h3>
+  <p>Relación entre el alimento consumido y el aumento de peso del animal.</p>
+</div>
+
+<div class="card">
+  <h3>Ganado de Doble Propósito</h3>
+  <p>Sistema en el que los animales se utilizan tanto para producción de leche como de carne.</p>
+</div>
+
+<div class="card">
+  <h3>Mejoramiento Genético</h3>
+  <p>Selección de animales con mejores características para optimizar la producción.</p>
+</div>
+
+<div class="card">
+  <h3>Ensilaje</h3>
+  <p>Método de conservación de forraje mediante fermentación para alimentar el ganado en épocas de escasez.</p>
+</div>
+
+<div class="card">
+  <h3>Hidratación Animal</h3>
+  <p>Suministro adecuado de agua para mantener la salud y productividad del ganado.</p>
+</div>
+
+<div class="card">
+  <h3>Manejo del Hato</h3>
+  <p>Organización y control del grupo de animales dentro de una explotación ganadera.</p>
+</div>
+
+<div class="card">
+  <h3>Sostenibilidad Ganadera</h3>
+  <p>Prácticas que buscan reducir el impacto ambiental de la producción animal.</p>
+</div>
+
+<div class="card">
+  <h3>Ciclo Productivo</h3>
+  <p>Etapas por las que pasa el animal desde su nacimiento hasta su producción o venta.</p>
+</div>
+
+<div class="card">
+  <h3>Registro Productivo</h3>
+  <p>Control de datos como peso, producción de leche o reproducción de los animales.</p>
+</div>
+
+<div class="card">
+  <h3>Peso Vivo</h3>
+  <p>Peso total del animal antes del sacrificio o comercialización.</p>
+</div>
+
+<div class="card">
+  <h3>Lactancia</h3>
+  <p>Periodo en el cual la hembra produce leche después del parto.</p>
+</div>
+
+<div class="card">
+  <h3>Estrés Térmico</h3>
+  <p>Condición en la que el animal sufre por altas temperaturas, afectando su producción.</p>
+</div>
+
+<div class="card">
+  <h3>Manejo Reproductivo</h3>
+  <p>Estrategias para mejorar la reproducción y eficiencia del hato.</p>
+</div>
+
+<div class="card">
+  <h3>Diagnóstico Veterinario</h3>
+  <p>Evaluación profesional para detectar enfermedades en los animales.</p>
+</div>
+
+<div class="card">
+  <h3>Corrales de Manejo</h3>
+  <p>Espacios diseñados para facilitar el control, alimentación y revisión del ganado.</p>
+</div>
+
+  </div>
+
+  <button onclick="volver()">⬅ Volver</button>
+</div>
+
+<script>
+function volver() {
+  window.location.href = "index.html";
+}
+</script>
 
 </body>
 </html>
